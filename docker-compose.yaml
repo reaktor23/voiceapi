@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  voiceapi:
+    container_name: voiceapi
+    build: .
+    ports:
+      - "8001:80"
+    devices:
+      - /dev/snd:/dev/snd
+    restart: always
